@@ -2,7 +2,7 @@ import Header from "../Header/Header";
 import {Button, Form} from "react-bootstrap";
 import '../../main.css'
 import Footer from "../Footer/Footer";
-export default function AboutUsPage() {
+export default function ContactPage() {
     return(
         <>
             <div className="main-content">
