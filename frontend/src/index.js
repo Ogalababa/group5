@@ -8,6 +8,7 @@ import JobsPage from "./components/Jobs/JobsPage";
 import CertificatePage from "./components/Certificate/CertificatePage";
 import NotFoundPage from "./components/Notfound/NotFoundPage";
 import ContactPage from "./components/Contact/ContactPage"
+import LoginPage from "./components/Login/LoginPage";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     {
         path:"/contact",
         element: <ContactPage/>
+    },
+    {
+        path:"/login",
+        element: <LoginPage/>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
