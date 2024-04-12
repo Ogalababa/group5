@@ -16,6 +16,7 @@ export default function Header() {
                             <Nav.Link href="/about-us">Over ons</Nav.Link>
                             <Nav.Link href="/certificate">Certificering</Nav.Link>
                         </Nav>
+                        <Nav.Link href="/login" className="justify-content-end">Login</Nav.Link>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
