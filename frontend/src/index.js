@@ -7,6 +7,7 @@ import AboutUsPage from "./components/AboutUs/AboutUsPage";
 import JobsPage from "./components/Jobs/JobsPage";
 import CertificatePage from "./components/Certificate/CertificatePage";
 import NotFoundPage from "./components/Notfound/NotFoundPage";
+import ContactPage from "./components/Contact/ContactPage"
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
         path:"/certificate",
         element: <CertificatePage/>
+    },
+    {
+        path:"/contact",
+        element: <ContactPage/>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
