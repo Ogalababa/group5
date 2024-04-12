@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 export default function NotFoundPage() {
     return(
@@ -6,6 +7,7 @@ export default function NotFoundPage() {
             <Header/>
             <h2>404 Page not found!</h2>
             <p>Sorry, something went wrong!</p>
+            <Footer/>
         </>
 
     )

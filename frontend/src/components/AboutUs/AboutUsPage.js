@@ -2,6 +2,7 @@ import Header from "../Header/Header";
 import {Button, Card} from "react-bootstrap";
 import './aboutUs.css';
 import '../../main.css'
+import Footer from "../Footer/Footer";
 export default function AboutUsPage() {
     return(
         <>
@@ -60,6 +61,7 @@ export default function AboutUsPage() {
                         <Button variant="outline-secondary" href={"/contact"}>Contact</Button>
                     </Card.Body>
                 </Card>
+                <Footer/>
             </div>
         </>
 

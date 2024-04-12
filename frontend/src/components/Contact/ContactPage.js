@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import {Button, Form} from "react-bootstrap";
 import '../../main.css'
+import Footer from "../Footer/Footer";
 export default function AboutUsPage() {
     return(
         <>
@@ -23,6 +24,7 @@ export default function AboutUsPage() {
                         Submit
                     </Button>
                 </Form>
+                <Footer/>
             </div>
         </>
 
