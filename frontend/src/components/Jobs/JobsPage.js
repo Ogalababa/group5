@@ -2,11 +2,13 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Container from "react-bootstrap/Container";
 import {Button, Card, Col, Row} from "react-bootstrap";
+import SearchJobs from "../SearchJobs/SearchJobs";
 
 export default function JobsPage() {
     return(
         <>
             <Header/>
+            <SearchJobs/>
             <Container>
                 <Row>
                     <Col>
