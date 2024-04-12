@@ -57,7 +57,7 @@ export default function CertificatePage() {
                             amet augue vitae tempor. Donec congue, quam id finibus accumsan, leo augue sollicitudin
                             nibh, a semper leo quam sed magna.
                         </Card.Text>
-                        <Button variant="outline-secondary">Contact</Button>
+                        <Button variant="outline-secondary" href={"/contact"}>Contact</Button>
                     </Card.Body>
                 </Card>
             </div>
