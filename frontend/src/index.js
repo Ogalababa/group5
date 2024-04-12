@@ -6,11 +6,13 @@ import HomePage from "./components/Home/HomePage";
 import AboutUsPage from "./components/AboutUs/AboutUsPage";
 import JobsPage from "./components/Jobs/JobsPage";
 import CertificatePage from "./components/Certificate/CertificatePage";
+import NotFoundPage from "./components/Notfound/NotFoundPage";
 
 const router = createBrowserRouter([
     {
         path:"/",
-        element: <HomePage/>
+        element: <HomePage/>,
+        errorElement: <NotFoundPage/>
     },
     {
         path:"/jobs",
