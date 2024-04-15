@@ -1,0 +1,22 @@
+.instructions{
+    font-size: small;
+    position: relative;
+    color: red;
+}
+
+.offscreen{
+    position: absolute;
+    left: -99999px;
+}
+
+.hide{
+    display: none;
+}
+
+.valid{
+    color: limegreen;
+}
+
+.invalid{
+    color: red;
+}
