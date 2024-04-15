@@ -9,6 +9,7 @@ import CertificatePage from "./components/Certificate/CertificatePage";
 import NotFoundPage from "./components/Notfound/NotFoundPage";
 import ContactPage from "./components/Contact/ContactPage"
 import LoginPage from "./components/Login/LoginPage";
+import RegisterPage from "./components/Register/RegisterPage";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
     {
         path:"/login",
         element: <LoginPage/>
+    },
+    {
+        path: "/register",
+        element: <RegisterPage/>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
