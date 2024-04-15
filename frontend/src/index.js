@@ -1,13 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/App';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import HomePage from "./components/Home/HomePage";
+import AboutUsPage from "./components/AboutUs/AboutUsPage";
+import JobsPage from "./components/Jobs/JobsPage";
+import CertificatePage from "./components/Certificate/CertificatePage";
+import NotFoundPage from "./components/Notfound/NotFoundPage";
+import ContactPage from "./components/Contact/ContactPage"
+import LoginPage from "./components/Login/LoginPage";
 
-
+const router = createBrowserRouter([
+    {
+        path:"/",
+        element: <HomePage/>,
+        errorElement: <NotFoundPage/>
+    },
+    {
+        path:"/jobs",
+        element: <JobsPage/>
+    },
+    {
+        path:"/about-us",
+        element: <AboutUsPage/>
+    },
+    {
+        path:"/certificate",
+        element: <CertificatePage/>
+    },
+    {
+        path:"/contact",
+        element: <ContactPage/>
+    },
+    {
+        path:"/login",
+        element: <LoginPage/>
+    }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <RouterProvider router={router}/>
 );
 
