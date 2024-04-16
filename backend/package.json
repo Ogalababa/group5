@@ -2,21 +2,15 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/functions/*.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "nodemon": "^3.1.0"
+    "@azure/functions": "^4.0.0"
   },
   "devDependencies": {
-    "i": "^0.3.7",
-    "lint": "^0.8.19",
-    "npm": "^10.5.2"
+    "azure-functions-core-tools": "^4.x"
   }
 }
