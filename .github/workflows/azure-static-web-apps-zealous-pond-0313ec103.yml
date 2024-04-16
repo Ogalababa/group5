@@ -21,7 +21,7 @@ jobs:
           lfs: false
       - name: Replace Environment Variable in Code
         run: |
-          find . -type f -name '*.js' -exec sed -i 's/\${process.env.REACT_APP_API_URL}/"api"/g' {} +
+          find . -type f -name '*.js' -exec sed -i 's/\${process.env.REACT_APP_API_URL}/api/g' {} +
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
