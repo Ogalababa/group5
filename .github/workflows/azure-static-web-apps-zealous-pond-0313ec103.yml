@@ -23,6 +23,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'  # 指定 Node.js 版本，根据需要修改
+      - name: Install Dependencies
+        run: npm install
+      - name: Build Project
+        run: npm run build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
