@@ -10,7 +10,7 @@ import NotFoundPage from "./components/Notfound/NotFoundPage";
 import ContactPage from "./components/Contact/ContactPage"
 import LoginPage from "./components/Login/LoginPage";
 import RegisterPage from "./components/Register/RegisterPage";
-console.log('API Base URL:', process.env.REACT_APP_API_BASE_URL);
+console.log('API Base URL:', process.env.REACT_APP_API_BASE_URL); //OK
 const router = createBrowserRouter([
     {
         path:"/",
