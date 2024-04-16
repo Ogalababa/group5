@@ -24,6 +24,7 @@ export default function RegisterPage() {
     const [matchFocus, setMatchFocus] = useState(false);
 
     const [errorMessage, setErrorMessage] = useState('');
+    // eslint-disable-next-line
     const [succes, setSucces] = useState(false);
 
     useEffect(() => {
