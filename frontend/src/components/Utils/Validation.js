@@ -1,3 +1,4 @@
+/* eslint no-useless-escape: "off" */
 // return true if the email contains the correct characters
 export const validateEmail = (email) => {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
