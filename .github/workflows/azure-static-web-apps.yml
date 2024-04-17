@@ -15,23 +15,42 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Check PR Base Branch
+        if: github.event_name == 'pull_request'
+        run: |
+          if [[ "${{ github.base_ref }}" != 'main' ]] || [[ "${{ github.head_ref }}" != 'development' ]]; then
+            echo "::error::Pull request must be from 'development' to 'main'."
+            exit 1
+          fi
       - uses: actions/checkout@v3
         with:
           submodules: true
           lfs: false
+      - name: Replace Environment Variable in Code
+        run: |
+          find . -type f -name '*.js' -exec sed -i 's/\${process.env.REACT_APP_API_URL}/api/g' {} +
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm install
+      - name: Build Project
+        run: |
+          cd frontend
+          npm run build
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_TREE_07F6E5203 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          azure_static_web_apps_api_token:  ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_WONDERFUL_TREE_07F6E5203 }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "frontend" # App source code path
-          api_location: "backend" # Api source code path - optional
-          output_location: "build" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          app_location: "frontend"
+          api_location: "backend"
+          output_location: "build"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
